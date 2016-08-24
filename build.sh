@@ -2,7 +2,7 @@
 
 [[ -z $1 ]] && { echo "Usage: build.sh version"; exit -1; }
 
-make all java
+make java
 
 cd java
 
