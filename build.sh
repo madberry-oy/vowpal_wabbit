@@ -14,6 +14,6 @@ echo build version: $VERSION
 
 sed "s/<version>$VW_VERSION.*<\/version>/<version>$VERSION<\/version>/g" pom.xml > pom.local
 
-mvn -f pom.local package
+#mvn -f pom.local package
 
-rm pom.local
+#rm pom.local
