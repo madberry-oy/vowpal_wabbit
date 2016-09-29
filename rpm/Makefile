@@ -1,4 +1,4 @@
-PACKAGE=madberry-vowpal-wabbit
+PACKAGE=vowpal-wabbit-rpm
 VERSION=1.0.0
 
 include ../../.packaging/rpm.mk
