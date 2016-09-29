@@ -1,7 +1,7 @@
 PACKAGE=vowpal-wabbit-rpm
 VERSION=1.0.0
 
-include ../../.packaging/rpm.mk
+include ../.packaging/rpm.mk
 
 rpm-prepare::
 	mkdir -p src/usr/local/bin
