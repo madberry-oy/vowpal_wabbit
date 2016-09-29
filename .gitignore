@@ -22,6 +22,7 @@ config.h
 *.lo
 vowpalwabbit/stamp-*
 Makefile
+!rpm/Makefile
 config.status
 test/*.predict
 test/*.cmp
