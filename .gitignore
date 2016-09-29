@@ -31,7 +31,6 @@ test/*.cmp
 t_*
 bin
 vw
-.*
 vw.1
 *.cache
 *.tgz
