@@ -8,13 +8,15 @@
 extern "C"
 {
 #endif
-/*
- * Class:     vw_learner_VWFloatLearner
- * Method:    predictFloat
- * Signature: (Ljava/lang/String;ZJ)F
- */
+
 JNIEXPORT jfloat JNICALL Java_vw_learner_VWFloatLearner_predict
 (JNIEnv *, jobject, jstring, jboolean, jlong);
+
+JNIEXPORT jfloat JNICALL Java_vw_learner_VWLearners_getWeight
+(JNIEnv *, jobject, jlong, jint, jint);
+
+JNIEXPORT void JNICALL Java_vw_learner_VWLearners_setWeight
+(JNIEnv *, jobject, jlong, jint, jint, jfloat);
 
 #ifdef __cplusplus
 }
