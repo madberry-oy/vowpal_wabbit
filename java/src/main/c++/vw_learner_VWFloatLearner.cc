@@ -8,12 +8,12 @@ JNIEXPORT jfloat JNICALL Java_vw_learner_VWFloatLearner_predict(JNIEnv *env, job
 { return base_predict<jfloat>(env, obj, example_string, learn, vwPtr, floatPredictor);
 }
 
-JNIEXPORT jfloat JNICALL Java_vw_learner_VWLearners_getWeight(JNIEnv *env, jobject obj, jlong vwPtr, jint index, jint offset)
+JNIEXPORT jfloat JNICALL Java_vw_learner_VWLearners_getWeight(JNIEnv *env, jobject obj, jlong vwPtr, jint index)
 { vw* vwInstance = (vw*)vwPtr;
-  return (jfloat) VW::get_weight(*vwInstance, index, offset);
+  return (jfloat) VW::get_weight(*vwInstance, index, 0);
 }
 
-JNIEXPORT void JNICALL Java_vw_learner_VWLearners_setWeight(JNIEnv *env, jobject obj, jlong vwPtr, jint index, jint offset, jfloat value)
+JNIEXPORT void JNICALL Java_vw_learner_VWLearners_setWeight(JNIEnv *env, jobject obj, jlong vwPtr, jint index, jfloat value)
 { vw* vwInstance = (vw*)vwPtr;
-  VW::set_weight(*vwInstance, index, offset, value);
+  VW::set_weight(*vwInstance, index, 0, value);
 }

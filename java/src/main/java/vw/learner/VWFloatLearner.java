@@ -48,17 +48,17 @@ final public class VWFloatLearner extends VWBase implements VWLearner {
         return learnOrPredict(example, true);
     }
 
-    public float getWeight(int index, int offset){
-       return this.getWeight( nativePointer, index, offset );
+    public float getWeight(int index){
+       return this.getWeight(nativePointer, index);
     }
 
-   public void setWeight(int index, int offset, float value){
-       this.setWeight( nativePointer, index, offset, value );
+   public void setWeight(int index, float value){
+       this.setWeight(nativePointer, index, value);
    }
 
     private native float predict(String example, boolean learn, long nativePointer);
 
-    private native float getWeight(long nativePointer, int index, int offset);
+    private native float getWeight(long nativePointer, int index);
 
-    private native void setWeight(long nativePointer, int index, int offset, float value);
+    private native void setWeight(long nativePointer, int index, float value);
 }
